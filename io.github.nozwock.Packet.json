@@ -9,6 +9,7 @@
     ],
     "command": "packet",
     "finish-args": [
+        "--allow=bluetooth",
         "--share=network",
         "--filesystem=xdg-download",
         "--system-talk-name=org.bluez",
