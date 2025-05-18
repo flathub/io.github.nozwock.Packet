@@ -82,8 +82,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nozwock/packet/releases/download/0.1.1/packet-0.1.1.tar.xz",
-                    "sha256": "251977a692c6e788d5ad6dd01294ef9956f9071f1c962dc3bfb6374cafd43913",
+                    "url": "https://github.com/nozwock/packet/releases/download/0.1.2/packet-0.1.2.tar.xz",
+                    "sha256": "42f65f4fdaf7f3bfca467f057dbfc04e40780ed25d3d9a3ae70b8f24d273368c",
                     "strip-components": 0
                 }
             ]
