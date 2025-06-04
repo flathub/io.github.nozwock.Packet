@@ -80,11 +80,14 @@
         {
             "name": "packet",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Doffline=true"
+            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/nozwock/packet.git",
-                    "commit": "0a4302b6bb92096ee17b1a8ea6e2820ceb8ef3ac",
+                    "commit": "9c4ed86b2317b3c60e8d6d3afb7956d9d5ec4123",
                     "strip-components": 0
                 },
                 "cargo-sources.json"
