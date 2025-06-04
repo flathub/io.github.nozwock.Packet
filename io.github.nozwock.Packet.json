@@ -82,11 +82,12 @@
             "buildsystem": "meson",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/nozwock/packet/releases/download/0.3.4/packet-0.3.4.tar.xz",
-                    "sha256": "e12b4a646446ec6df560b5bb4b4dc27b82a2d285d9c966374a4a5c64ddf1e620",
+                    "type": "git",
+                    "url": "https://github.com/nozwock/packet.git",
+                    "commit": "0a4302b6bb92096ee17b1a8ea6e2820ceb8ef3ac",
                     "strip-components": 0
-                }
+                },
+                "cargo-sources.json"
             ]
         }
     ]
