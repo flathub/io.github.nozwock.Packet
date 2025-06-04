@@ -64,11 +64,11 @@ modules:
         commit: 0a4302b6bb92096ee17b1a8ea6e2820ceb8ef3ac
         strip-components: 0
       # cargo-sources.json needs to be placed before the
-      # symlinking, otherwise the config will just be empty
+      # copying, otherwise the config will just be empty
       - cargo-sources.json
       # Why this?
       # https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo#cargo_home-is-set-by-buildsystem
       - type: shell
         commands:
           - mkdir -p .cargo
-          - ln -s cargo/config .cargo/config.toml
+          - cp cargo/config .cargo/config.toml
