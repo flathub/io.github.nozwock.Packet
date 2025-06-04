@@ -3,9 +3,10 @@ set ignore-comments
 default: gen-sources validate-manifest
 
 app_id := "io.github.nozwock.Packet"
+manifest := app_id + ".yml"
 
 validate-manifest:
-    flatpak run org.flathub.flatpak-external-data-checker --edit-only "{{ app_id }}.yml"
+    flatpak run org.flathub.flatpak-external-data-checker --edit-only "{{ manifest }}"
 
 gen-sources:
     #!/usr/bin/env bash
@@ -19,7 +20,8 @@ gen-sources:
     fi
 
     echo -e '\e[1mChecking out commit from manifest...\e[0m'
-    REV="$(cat io.github.nozwock.Packet.json | jq -r '.modules[] | select(.name=="packet").sources.[0].commit')"
+    # https://github.com/mikefarah/yq, go-yq
+    REV="$(cat "{{ manifest }}" | yq -r '.modules[] | select(.name=="packet").sources.[0].commit')"
     git -C .cache/packet checkout "$REV"
 
     if [ ! -d .venv ]; then
