@@ -1,6 +1,11 @@
 set ignore-comments
 
-default: gen-sources
+default: gen-sources validate-manifest
+
+app_id := "io.github.nozwock.Packet"
+
+validate-manifest:
+    flatpak run org.flathub.flatpak-external-data-checker --edit-only "{{ app_id }}.json"
 
 gen-sources:
     #!/usr/bin/env bash
@@ -16,7 +21,6 @@ gen-sources:
     echo -e '\e[1mChecking out commit from manifest...\e[0m'
     REV="$(cat io.github.nozwock.Packet.json | jq -r '.modules[] | select(.name=="packet").sources.[0].commit')"
     git -C .cache/packet checkout "$REV"
-
 
     if [ ! -d .venv ]; then
         echo -e '\e[1mSetting up python environment and dependencies...\e[0m'
