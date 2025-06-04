@@ -84,7 +84,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/nozwock/packet/releases/download/0.3.4/packet-0.3.4.tar.xz",
-                    "sha256": "e12b4a646446ec6df560b5bb4b4dc27b82a2d285d9c966374a4a5c64ddf1e620",
+                    "sha256": "c9b150e3d880684614dcedda45a53109aa69b12f872c174ac91987e2845286d6",
                     "strip-components": 0
                 }
             ]
