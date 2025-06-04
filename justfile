@@ -5,7 +5,7 @@ default: gen-sources validate-manifest
 app_id := "io.github.nozwock.Packet"
 
 validate-manifest:
-    flatpak run org.flathub.flatpak-external-data-checker --edit-only "{{ app_id }}.json"
+    flatpak run org.flathub.flatpak-external-data-checker --edit-only "{{ app_id }}.yml"
 
 gen-sources:
     #!/usr/bin/env bash
