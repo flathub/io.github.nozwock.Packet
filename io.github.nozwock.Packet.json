@@ -88,14 +88,14 @@
                     "commit": "0a4302b6bb92096ee17b1a8ea6e2820ceb8ef3ac",
                     "strip-components": 0
                 },
+                "cargo-sources.json",
                 {
                     "type": "shell",
                     "commands": [
                         "mkdir -p .cargo",
                         "ln -s cargo/config .cargo/config.toml"
                     ]
-                },
-                "cargo-sources.json"
+                }
             ]
         }
     ]
