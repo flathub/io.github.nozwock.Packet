@@ -7,6 +7,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm18
 command: packet
 finish-args:
+  - --filesystem=home/.local/share/nautilus-python/extensions
   - --allow=bluetooth
   - --share=network
   - --filesystem=xdg-download
@@ -61,7 +62,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/nozwock/packet.git
-        commit: d9c38c98d7301cc25d1d135a9b87bcfa2aa4a354
+        commit: dc5924c6e8d1ce83674b28dde1d93b1039cee2e6
       # cargo-sources.json needs to be placed before the
       # copying, otherwise the config will just be empty
       - cargo-sources.json
