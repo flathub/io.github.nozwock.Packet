@@ -62,7 +62,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/nozwock/packet.git
-        commit: dc5924c6e8d1ce83674b28dde1d93b1039cee2e6
+        commit: a82b422a85ba5d7995b77e7aa5c33c654b4e40d4
       # cargo-sources.json needs to be placed before the
       # copying, otherwise the config will just be empty
       - cargo-sources.json
