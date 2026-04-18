@@ -7,6 +7,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm20
 command: packet
 finish-args:
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --filesystem=home/.local/share/nautilus-python/extensions
   - --allow=bluetooth
   - --share=network
