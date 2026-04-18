@@ -7,6 +7,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm20
 command: packet
 finish-args:
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --filesystem=home/.local/share/nautilus-python/extensions
   - --allow=bluetooth
   - --share=network
@@ -54,7 +55,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/nozwock/packet.git
-        commit: bc02dc9fa3a8626b79fe60820bce8541e005f7fd
+        commit: 17f37acfa99f2c8235dd060ce8d6e4105432545a
       # cargo-sources.json needs to be placed before the
       # copying, otherwise the config will just be empty
       - cargo-sources.json
